@@ -11,4 +11,15 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
+.layout_wrapper {
+  display: flex;
+  height: 100vh; }
+
+.description {
+  flex-basis: 65%;
+  background: salmon; }
+
+.carousel {
+  display: flex; }
+
 /*# sourceMappingURL=style.css.map */
