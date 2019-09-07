@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Icon from './utilities/Icon';
-import '../../resources/img/sprite.svg';
 
 class Description extends Component {
     render() {
@@ -15,12 +14,28 @@ class Description extends Component {
                 <h4 className="description_collection">running collections</h4>
 
                 <div className="description_icons">
-                   <Icon name="icon-star-full" />
-                   <Icon name="icon-star-full" />
-                   <Icon name="icon-star-full" />
-                   <Icon name="icon-star-full" />
+
+                    <Icon name="icon-star-full" />
+                    <Icon name="icon-star-full" />
+                    <Icon name="icon-star-full" />
+                    <Icon name="icon-star-full" />
+                    <Icon name="icon-star-full" fill="gray" />
+
                 </div>
-            </div>
+
+                <h3 className="description_title">description</h3>
+
+                <span className="description_text">
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                    lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+                </span>
+            </div>  /* description */
         );
     }
 }

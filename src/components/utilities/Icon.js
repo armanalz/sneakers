@@ -3,7 +3,8 @@ import SVG from '../../resources/img/sprite.svg';
 
 const Icon = (props) => {
     return (
-        <svg className={`${props.name}`}>
+
+        <svg className={`${props.name}`} style={{fill:`${props.fill}`}}>
 		   <use xlinkHref={`${SVG}#${props.name}`} />
 	    </svg>
     );

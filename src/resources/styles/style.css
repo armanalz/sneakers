@@ -28,7 +28,7 @@ COLORS
 .description {
   flex-basis: 65%;
   padding: 4rem;
-  background: #f3f0f0; }
+  background: #f6f2f2; }
   .description_header {
     display: flex;
     flex-direction: row; }
@@ -41,18 +41,35 @@ COLORS
     .description_header-price {
       font-size: 2.5rem;
       color: #1c2ed3;
-      font-family: "Open Sans Condensed", sans-serif; }
+      font-family: "Open Sans Condensed", sans-serif;
+      font-weight: 600; }
   .description_collection {
     font-family: "Raleway", sans-serif;
     color: #525151;
+    font-weight: 600;
     font-size: 1.4rem;
     padding: 1rem 0;
     text-transform: capitalize; }
+  .description_title {
+    font-family: "Raleway", sans-serif;
+    color: #272727;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 2.5rem 0 1.5rem 0; }
+  .description_text {
+    font-family: "Raleway", sans-serif;
+    color: #525151;
+    font-weight: 600;
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+    padding: 0 4rem 0 0; }
 
 .icon-star-full {
-  fill: #dd531c;
-  height: 2rem;
-  width: 2rem; }
+  fill: #f75e22;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: 0 .7rem 0 0; }
 
 .carousel {
   display: flex;
