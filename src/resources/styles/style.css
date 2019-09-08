@@ -64,6 +64,87 @@ COLORS
     line-height: 2.2rem;
     font-size: 1.2rem;
     padding: 0 4rem 0 0; }
+  .description_options {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem 0; }
+    .description_options-text {
+      font-family: "Raleway", sans-serif;
+      color: #272727;
+      font-weight: 800;
+      font-size: 1.4rem;
+      text-transform: uppercase; }
+    .description_options-color {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%; }
+      .description_options-color-picker {
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem 0; }
+        .description_options-color-picker-item.border {
+          height: 1.9rem;
+          width: 1.9rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0.7rem 0 0; }
+          .description_options-color-picker-item.border-blue {
+            border: 1px solid #4856db; }
+          .description_options-color-picker-item.border-pink {
+            border: 1px solid #f890a2; }
+          .description_options-color-picker-item.border-magenta {
+            border: 1px solid #ff00c8; }
+          .description_options-color-picker-item.border-green {
+            border: 1px solid #2f9c2f; }
+          .description_options-color-picker-item.border-violet {
+            border: 1px solid #8a028a; }
+        .description_options-color-picker-item.circle {
+          height: 1.1rem;
+          width: 1.1rem;
+          border-radius: 50%;
+          background: salmon; }
+          .description_options-color-picker-item.circle-blue {
+            background: #4856db; }
+          .description_options-color-picker-item.circle-pink {
+            background: #f890a2; }
+          .description_options-color-picker-item.circle-magenta {
+            background: #ff00c8; }
+          .description_options-color-picker-item.circle-green {
+            background: #2f9c2f; }
+          .description_options-color-picker-item.circle-violet {
+            background: #8a028a; }
+    .description_options-size {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 25%; }
+    .description_options-qty {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 25%; }
+    .description_options-select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 1.5rem 0 0 0;
+      height: 3rem;
+      border: none;
+      background-image: url(../img/SVG/chevron-small-down.svg);
+      background-repeat: no-repeat;
+      background-size: 2rem 2rem;
+      background-color: #f6f2f2;
+      color: #525151;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: 800; }
+      .description_options-select.size {
+        background-position: 4.2rem .5rem;
+        width: 7rem; }
+      .description_options-select.qty {
+        background-position: 2.5rem .5rem;
+        width: 5.2rem; }
 
 .icon-star-full {
   fill: #f75e22;
