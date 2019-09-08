@@ -83,13 +83,13 @@ COLORS
         flex-direction: row;
         padding: 1.5rem 0; }
         .description_options-color-picker-item.border {
-          height: 1.9rem;
-          width: 1.9rem;
+          height: 2.2rem;
+          width: 2.2rem;
           border-radius: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
-          margin: 0 0.7rem 0 0; }
+          margin: 0 0.6rem 0 0; }
           .description_options-color-picker-item.border-blue {
             border: 1px solid #4856db; }
           .description_options-color-picker-item.border-pink {
@@ -101,10 +101,9 @@ COLORS
           .description_options-color-picker-item.border-violet {
             border: 1px solid #8a028a; }
         .description_options-color-picker-item.circle {
-          height: 1.1rem;
-          width: 1.1rem;
-          border-radius: 50%;
-          background: salmon; }
+          height: 1.4rem;
+          width: 1.4rem;
+          border-radius: 50%; }
           .description_options-color-picker-item.circle-blue {
             background: #4856db; }
           .description_options-color-picker-item.circle-pink {

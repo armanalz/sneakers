@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import Icon from './utilities/Icon';
 
 class Description extends Component {
-    render() {
+
+    state = {
+        
+        selected:[1,0,0,0,0]
+    }
+
+    render() { 
         return (
             <div className="description">
 
@@ -47,19 +53,39 @@ class Description extends Component {
 
                         <div className="description_options-color-picker">
 
-                            <div className="description_options-color-picker-item border border-blue">
+                            <div className={`description_options-color-picker-item border
+                                             ${this.state.selected[0] ? "border-blue" : null}`}
+                                 
+                                 onClick={() => this.setState({selected : [1,0,0,0,0]})}
+                            >
                                <div className="description_options-color-picker-item circle circle-blue"></div>
                             </div>
-                            <div className="description_options-color-picker-item border border-pink">
+
+                            <div className={`description_options-color-picker-item border
+                                             ${this.state.selected[1] ? "border-pink" : null}`}
+                                 onClick={() => this.setState({selected : [0,1,0,0,0]})}
+                            >
                                <div className="description_options-color-picker-item circle circle-pink"></div>
                             </div>
-                            <div className="description_options-color-picker-item border border-magenta">
+
+                            <div className={`description_options-color-picker-item border
+                                             ${this.state.selected[2] ? "border-magenta" : null}`}
+                                 onClick={() => this.setState({selected : [0,0,1,0,0]})}
+                            >
                                <div className="description_options-color-picker-item circle circle-magenta"></div>
                             </div>
-                            <div className="description_options-color-picker-item border border-green">
+
+                            <div className={`description_options-color-picker-item border
+                                             ${this.state.selected[3] ? "border-green" : null}`}
+                                 onClick={() => this.setState({selected : [0,0,0,1,0]})}
+                            >
                                <div className="description_options-color-picker-item circle circle-green"></div>
                             </div>
-                            <div className="description_options-color-picker-item border border-violet">
+
+                            <div className={`description_options-color-picker-item border
+                                             ${this.state.selected[4] ? "border-violet" : null}`}
+                                 onClick={() => this.setState({selected : [0,0,0,0,1]})}
+                            >
                                <div className="description_options-color-picker-item circle circle-violet"></div>
                             </div>
 
