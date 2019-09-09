@@ -21,9 +21,12 @@
         &-price {
             
             font-size: 2.5rem;
-            color: $color-price;
+            color: $color-blue;
             font-family: $price-font;
             font-weight: 600;
+            flex-basis: 15%;
+            display: flex;
+            justify-content: end;
         }
     }
 
@@ -210,6 +213,61 @@
             }
          }
     }
+
+    &_button {
+
+        display: flex;
+
+        &-wrapper {
+
+            flex-basis: 50%;
+
+        }
+
+        &-btn {
+
+            background-image:linear-gradient(to right, $color-orange , $color-orange-light);;
+            height: 4rem;
+            width: 17rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 100px;
+            padding: 0 .7rem;
+            cursor: pointer;
+            transition: all .2s;
+            border: none;
+
+            &:hover {
+
+                transform: translateY(3px);
+                box-shadow: 0 2px 5px 2px $color-tertiary;
+            }
+
+            &-title {
+
+                font-family: $description-font;
+                color: $color-bg-left;
+                font-weight: 900;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+        }
+
+        &-share {
+
+            flex-basis: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: right;
+
+        }
+    }
 }
 
 .icon-star-full {
@@ -218,4 +276,21 @@
     height: 1.8rem;
     width: 1.8rem;
     margin: 0 .7rem 0 0; 
+}
+
+.icon-cart {
+
+    fill: $color-bg-left;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin: 1.1rem 0;
+
+}
+
+.icon-share2 {
+
+    fill: $color-tertiary;
+    height: 1.8rem;
+    width: 1.8rem;
+
 }

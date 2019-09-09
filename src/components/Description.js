@@ -122,6 +122,18 @@ class Description extends Component {
 
                     </div>
 
+                </div>   {/* description_options */}
+
+                <div className="description_button">
+                    <div className="description_button-wrapper">
+                        <div className="description_button-btn">
+                            <Icon name="icon-cart"/>
+                            <h3 className="description_button-btn-title">add to cart</h3>
+                        </div>
+                    </div>
+                    <div className="description_button-share">
+                        <Icon name="icon-share2"/>
+                    </div>
                 </div>
 
             </div>  /* description */
