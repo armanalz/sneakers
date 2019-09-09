@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import Icon from './utilities/Icon';
 
-class Description extends Component {
+class Layout extends Component {
 
     state = {
         
-        selected:[1,0,0,0,0]
+        selected:[1,0,0,0,0],
+        color:["blue","#4856db"],
+        active : [1,0,0,0]
     }
 
     render() { 
         return (
+
+        <div className="layout_wrapper">
+
             <div className="description">
 
                 <div className="description_header">
                     <h1 className="description_header-title">nike odyssey react</h1>
-                    <h2 className="description_header-price">$55.56</h2>
+                    <h2 className="description_header-price" style={{color:this.state.color[1]}}>$55.56</h2>
                 </div>
 
                 <h4 className="description_collection">running collections</h4>
@@ -56,35 +61,40 @@ class Description extends Component {
                             <div className={`description_options-color-picker-item border
                                              ${this.state.selected[0] ? "border-blue" : null}`}
                                  
-                                 onClick={() => this.setState({selected : [1,0,0,0,0]})}
+                                 onClick={() => this.setState({selected : [1,0,0,0,0],
+                                                               color:["blue","#4856db"]})}
                             >
                                <div className="description_options-color-picker-item circle circle-blue"></div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
                                              ${this.state.selected[1] ? "border-pink" : null}`}
-                                 onClick={() => this.setState({selected : [0,1,0,0,0]})}
+                                 onClick={() => this.setState({selected : [0,1,0,0,0],
+                                                               color:["pink","#f890a2"]})}
                             >
                                <div className="description_options-color-picker-item circle circle-pink"></div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
                                              ${this.state.selected[2] ? "border-magenta" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,1,0,0]})}
+                                 onClick={() => this.setState({selected : [0,0,1,0,0],
+                                                               color:["magenta","#ff00c8"]})}
                             >
                                <div className="description_options-color-picker-item circle circle-magenta"></div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
                                              ${this.state.selected[3] ? "border-green" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,0,1,0]})}
+                                 onClick={() => this.setState({selected : [0,0,0,1,0],
+                                                               color:["green","#2f9c2f"]})}
                             >
                                <div className="description_options-color-picker-item circle circle-green"></div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
                                              ${this.state.selected[4] ? "border-violet" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,0,0,1]})}
+                                 onClick={() => this.setState({selected : [0,0,0,0,1],
+                                                               color:["violet","#8a028a"]})}
                             >
                                <div className="description_options-color-picker-item circle circle-violet"></div>
                             </div>
@@ -136,9 +146,58 @@ class Description extends Component {
                     </div>
                 </div>
 
-            </div>  /* description */
+            </div>  {/* description */}
+
+            <div className="carousel" style={{background:`${this.state.color[1]}`}}> 
+
+                <div className="carousel_logo"></div>
+
+                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
+                                "1"+" "+`${this.state.active[0] ? "active" : ""}`}
+                >
+                </div>
+                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
+                                "2"+" "+`${this.state.active[1] ? "active" : ""}`}
+                >
+                </div>
+                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
+                                "3"+" "+`${this.state.active[2] ? "active" : ""}`}
+                >
+                </div>
+                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
+                                "4"+" "+`${this.state.active[3] ? "active" : ""}`}
+                >
+                </div>
+
+                <div className="carousel_controler">
+                    <div className={"carousel_controler-dot "+`${this.state.active[0] ? "active" : ""}`}
+                         style={{background:!this.state.active[0] ? `${this.state.color[1]}` : null}}
+                         onClick={() => this.setState({active : [1,0,0,0]})}
+                    >
+                    </div>
+                    <div className={"carousel_controler-dot "+`${this.state.active[1] ? "active" : ""}`}
+                         style={{background:!this.state.active[1] ? `${this.state.color[1]}` : null}}
+                         onClick={() => this.setState({active : [0,1,0,0]})}
+                    >
+                    </div>
+                    <div className={"carousel_controler-dot "+`${this.state.active[2] ? "active" : ""}`}
+                         style={{background:!this.state.active[2] ? `${this.state.color[1]}` : null}}
+                         onClick={() => this.setState({active : [0,0,1,0]})}
+                    >
+                    </div>
+                    <div className={"carousel_controler-dot "+`${this.state.active[3] ? "active" : ""}`}
+                         style={{background:!this.state.active[3] ? `${this.state.color[1]}` : null}}
+                         onClick={() => this.setState({active : [0,0,0,1]})}
+                    >
+                    </div>
+                </div>
+
+            </div>
+            
+        </div> /* layout_wrapper */
+
         );
     }
 }
 
-export default Description;
+export default Layout;

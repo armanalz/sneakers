@@ -21,6 +21,23 @@ FONTS
 COLORS
 
 */
+.icon-star-full {
+  fill: #ff5a0e;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: 0 .7rem 0 0; }
+
+.icon-cart {
+  fill: #f6f2f2;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin: 1.1rem 0; }
+
+.icon-share2 {
+  fill: #afaeae;
+  height: 1.8rem;
+  width: 1.8rem; }
+
 .layout_wrapper {
   display: flex;
   height: 100vh; }
@@ -40,7 +57,6 @@ COLORS
       flex-basis: 85%; }
     .description_header-price {
       font-size: 2.5rem;
-      color: #4856db;
       font-family: "Open Sans Condensed", sans-serif;
       font-weight: 600;
       flex-basis: 15%;
@@ -92,13 +108,14 @@ COLORS
           display: flex;
           justify-content: center;
           align-items: center;
-          margin: 0 0.6rem 0 0; }
+          margin: 0 0.6rem 0 0;
+          cursor: pointer; }
           .description_options-color-picker-item.border-blue {
             border: 1px solid #4856db; }
           .description_options-color-picker-item.border-pink {
             border: 1px solid #f890a2; }
           .description_options-color-picker-item.border-magenta {
-            border: 1px solid #ff00c8; }
+            border: 1px solid #c7029c; }
           .description_options-color-picker-item.border-green {
             border: 1px solid #2f9c2f; }
           .description_options-color-picker-item.border-violet {
@@ -112,7 +129,7 @@ COLORS
           .description_options-color-picker-item.circle-pink {
             background: #f890a2; }
           .description_options-color-picker-item.circle-magenta {
-            background: #ff00c8; }
+            background: #c7029c; }
           .description_options-color-picker-item.circle-green {
             background: #2f9c2f; }
           .description_options-color-picker-item.circle-violet {
@@ -181,26 +198,63 @@ COLORS
       align-items: flex-end;
       justify-content: right; }
 
-.icon-star-full {
-  fill: #ff5a0e;
-  height: 1.8rem;
-  width: 1.8rem;
-  margin: 0 .7rem 0 0; }
-
-.icon-cart {
-  fill: #f6f2f2;
-  height: 1.8rem;
-  width: 1.8rem;
-  margin: 1.1rem 0; }
-
-.icon-share2 {
-  fill: #afaeae;
-  height: 1.8rem;
-  width: 1.8rem; }
-
 .carousel {
   display: flex;
   flex-basis: 35%;
-  background: #4856db; }
+  position: relative; }
+  .carousel_logo {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-image: url(../img/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15rem 7.6rem;
+    display: block;
+    width: 15rem;
+    height: 15rem; }
+  .carousel_slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: none; }
+    .carousel_slide.active {
+      display: block; }
+    .carousel_slide.blue1 {
+      background-image: url(../img/blue1.png);
+      background-size: 32rem 20rem; }
+    .carousel_slide.blue2 {
+      background-image: url(../img/blue2.png);
+      background-size: 30rem 20rem; }
+    .carousel_slide.blue3 {
+      background-image: url(../img/blue3.png);
+      background-size: 30rem 30rem; }
+    .carousel_slide.blue4 {
+      background-image: url(../img/blue4.png);
+      background-size: 30rem 30rem; }
+    .carousel_slide.pink1 {
+      background-image: url(../img/pink1.png);
+      background-size: 30rem 30rem; }
+  .carousel_controler {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex; }
+    .carousel_controler-dot {
+      width: 1.2rem;
+      height: 1.2rem;
+      filter: brightness(70%);
+      border-radius: 100%;
+      margin-right: 1rem;
+      cursor: pointer; }
+      .carousel_controler-dot.active {
+        background-color: #f6f2f2;
+        filter: brightness(100%); }
 
 /*# sourceMappingURL=style.css.map */
