@@ -45,15 +45,15 @@ COLORS
   @media only screen and (max-width: 56.25em) {
     .layout_wrapper {
       flex-direction: column-reverse;
-      height: 200vh; } }
-  @media only screen and (max-width: 30em) {
-    .layout_wrapper {
-      height: 250vh; } }
+      height: auto; } }
 
 .description {
   flex-basis: 65%;
   padding: 4rem;
   background: #f6f2f2; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      flex-basis: auto; } }
   .description_header {
     display: flex;
     flex-direction: row; }
@@ -226,6 +226,10 @@ COLORS
   display: flex;
   flex-basis: 35%;
   position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .carousel {
+      height: 45rem;
+      flex-basis: auto; } }
   .carousel_logo {
     position: absolute;
     top: 2rem;

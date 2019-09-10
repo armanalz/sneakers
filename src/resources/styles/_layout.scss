@@ -3,19 +3,20 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
+    
 
     @include respond(tab-port) {
              
         flex-direction: column-reverse;
-        height: 200vh;
+        height: auto;
         
     }
 
-    @include respond(phone) {
+    // @include respond(phone) {
              
-        height: 250vh;
+    //     height: 250vh;
         
-    }
+    // }
 }
 
 .description {
@@ -23,6 +24,13 @@
     flex-basis: 65%;
     padding: 4rem;
     background: $color-bg-left;
+
+
+    @include respond(tab-port) {
+             
+       flex-basis: auto;
+        
+    }
 
     &_header {
 
@@ -327,6 +335,13 @@
     display: flex;
     flex-basis: 35%;
     position: relative;
+
+    @include respond(tab-port) {
+             
+        height: 45rem;
+        flex-basis: auto;
+        
+    }
 
     &_logo {
 
