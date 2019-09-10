@@ -40,7 +40,15 @@ COLORS
 
 .layout_wrapper {
   display: flex;
+  flex-direction: row;
   height: 100vh; }
+  @media only screen and (max-width: 56.25em) {
+    .layout_wrapper {
+      flex-direction: column-reverse;
+      height: 200vh; } }
+  @media only screen and (max-width: 30em) {
+    .layout_wrapper {
+      height: 250vh; } }
 
 .description {
   flex-basis: 65%;
@@ -49,19 +57,29 @@ COLORS
   .description_header {
     display: flex;
     flex-direction: row; }
+    @media only screen and (max-width: 30em) {
+      .description_header {
+        flex-direction: column-reverse; } }
     .description_header-title {
       font-size: 3rem;
       font-family: "Roboto", sans-serif;
       color: #272727;
       text-transform: uppercase;
       flex-basis: 85%; }
+      @media only screen and (max-width: 30em) {
+        .description_header-title {
+          flex-basis: 65%; } }
     .description_header-price {
       font-size: 2.5rem;
       font-family: "Open Sans Condensed", sans-serif;
       font-weight: 600;
       flex-basis: 15%;
       display: flex;
-      justify-content: end; }
+      justify-content: flex-end; }
+      @media only screen and (max-width: 30em) {
+        .description_header-price {
+          flex-basis: 35%;
+          margin: 0 0 3rem 0; } }
   .description_collection {
     font-family: "Raleway", sans-serif;
     color: #525151;
@@ -82,11 +100,17 @@ COLORS
     font-weight: 600;
     line-height: 2.2rem;
     font-size: 1.2rem;
-    padding: 0 4rem 0 0; }
+    padding: 0; }
   .description_options {
     display: flex;
     flex-direction: row;
     padding: 5rem 0; }
+    @media only screen and (max-width: 75em) {
+      .description_options {
+        padding: 5rem 0 2rem 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .description_options {
+        padding: 5rem 0; } }
     .description_options-text {
       font-family: "Raleway", sans-serif;
       color: #272727;
@@ -196,7 +220,7 @@ COLORS
       flex-basis: 50%;
       display: flex;
       align-items: flex-end;
-      justify-content: right; }
+      justify-content: flex-end; }
 
 .carousel {
   display: flex;
@@ -214,6 +238,15 @@ COLORS
     display: block;
     width: 15rem;
     height: 15rem; }
+    @media only screen and (max-width: 56.25em) {
+      .carousel_logo {
+        top: .5rem;
+        left: auto;
+        transform: translate(0, 0);
+        right: 1.5rem;
+        background-size: 10.2rem 5.1rem;
+        width: 11rem;
+        height: 11rem; } }
   .carousel_slide {
     position: absolute;
     left: 0;
@@ -227,19 +260,124 @@ COLORS
       display: block; }
     .carousel_slide.blue1 {
       background-image: url(../img/blue1.png);
-      background-size: 32rem 20rem; }
+      background-size: 30rem 18rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.blue1 {
+          background-size: 40rem 24rem; } }
     .carousel_slide.blue2 {
       background-image: url(../img/blue2.png);
       background-size: 30rem 20rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.blue2 {
+          background-size: 40rem 27rem; } }
     .carousel_slide.blue3 {
       background-image: url(../img/blue3.png);
       background-size: 30rem 30rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.blue3 {
+          background-size: 40rem 40rem; } }
     .carousel_slide.blue4 {
       background-image: url(../img/blue4.png);
-      background-size: 30rem 30rem; }
+      background-size: 30rem 20rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.blue4 {
+          background-size: 40rem 27rem; } }
     .carousel_slide.pink1 {
       background-image: url(../img/pink1.png);
+      background-size: 30rem 25rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.pink1 {
+          background-size: 40rem 33rem; } }
+    .carousel_slide.pink2 {
+      background-image: url(../img/pink2.png);
+      background-size: 30rem 23rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.pink2 {
+          background-size: 40rem 31rem; } }
+    .carousel_slide.pink3 {
+      background-image: url(../img/pink3.png);
+      background-size: 30rem 15rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.pink3 {
+          background-size: 40rem 20rem; } }
+    .carousel_slide.pink4 {
+      background-image: url(../img/pink4.png);
+      background-size: 30rem 20rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.pink4 {
+          background-size: 40rem 27rem; } }
+    .carousel_slide.magenta1 {
+      background-image: url(../img/magenta1.png);
+      background-size: 30rem 15rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.magenta1 {
+          background-size: 40rem 20rem; } }
+    .carousel_slide.magenta2 {
+      background-image: url(../img/magenta2.png);
       background-size: 30rem 30rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.magenta2 {
+          background-size: 40rem 40rem; } }
+    .carousel_slide.magenta3 {
+      background-image: url(../img/magenta3.png);
+      background-size: 30rem 30rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.magenta3 {
+          background-size: 40rem 40rem; } }
+    .carousel_slide.magenta4 {
+      background-image: url(../img/magenta4.png);
+      background-size: 30rem 18rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.magenta4 {
+          background-size: 40rem 24rem; } }
+    .carousel_slide.green1 {
+      background-image: url(../img/green1.png);
+      background-size: 30rem 19rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.green1 {
+          background-size: 40rem 26rem; } }
+    .carousel_slide.green2 {
+      background-image: url(../img/green2.png);
+      background-size: 30rem 22rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.green2 {
+          background-size: 40rem 29rem; } }
+    .carousel_slide.green3 {
+      background-image: url(../img/green3.png);
+      background-size: 30rem 30rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.green3 {
+          background-size: 40rem 40rem; } }
+    .carousel_slide.green4 {
+      background-image: url(../img/green4.png);
+      background-size: 30rem 22rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.green4 {
+          background-size: 40rem 29rem; } }
+    .carousel_slide.violet1 {
+      background-image: url(../img/violet1.png);
+      background-size: 30rem 20rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.violet1 {
+          background-size: 40rem 27rem; } }
+    .carousel_slide.violet2 {
+      background-image: url(../img/violet2.png);
+      background-size: 30rem 18rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.violet2 {
+          background-size: 40rem 24rem; } }
+    .carousel_slide.violet3 {
+      background-image: url(../img/violet3.png);
+      background-size: 30rem 21rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.violet3 {
+          background-size: 40rem 28rem; } }
+    .carousel_slide.violet4 {
+      background-image: url(../img/violet4.png);
+      background-size: 30rem 30rem; }
+      @media only screen and (max-width: 56.25em) and (min-width: 30em) {
+        .carousel_slide.violet4 {
+          background-size: 40rem 40rem; } }
   .carousel_controler {
     position: absolute;
     bottom: 3rem;

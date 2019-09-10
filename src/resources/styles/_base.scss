@@ -20,7 +20,7 @@ html {
 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };    //600px
+        @media only screen and (max-width: 30em) { @content };    //480px
     }
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 56.25em) { @content };     //900px
@@ -30,5 +30,8 @@ html {
     }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };    //1800
+    }
+    @if $breakpoint == spacebetween {
+        @media only screen and (max-width: 56.25em) and (min-width: 30em) { @content };    //between 480 and 900
     }
 }

@@ -1,7 +1,21 @@
 .layout_wrapper {
 
     display: flex;
+    flex-direction: row;
     height: 100vh;
+
+    @include respond(tab-port) {
+             
+        flex-direction: column-reverse;
+        height: 200vh;
+        
+    }
+
+    @include respond(phone) {
+             
+        height: 250vh;
+        
+    }
 }
 
 .description {
@@ -15,6 +29,12 @@
         display: flex;
         flex-direction: row;
 
+        @include respond(phone) {
+             
+           flex-direction: column-reverse;
+            
+        }
+
         &-title {
          
             font-size: 3rem;
@@ -22,6 +42,12 @@
             color: $color-primary;
             text-transform: uppercase;
             flex-basis: 85%;
+
+            @include respond(phone) {
+             
+                flex-basis: 65%;
+                 
+             }
         }
 
         &-price {
@@ -31,7 +57,14 @@
             font-weight: 600;
             flex-basis: 15%;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
+
+            @include respond(phone) {
+             
+                flex-basis: 35%;
+                margin: 0 0 3rem 0;
+                 
+             }
         }
     }
 
@@ -66,7 +99,7 @@
         font-weight: 600;
         line-height: 2.2rem;
         font-size: 1.2rem;
-        padding: 0 4rem 0 0;
+        padding: 0;
     }
 
     &_options {
@@ -74,6 +107,19 @@
         display: flex;
         flex-direction: row;
         padding: 5rem 0;
+
+        @include respond(tab-land) {
+             
+            padding: 5rem 0 2rem 0;
+            
+        }
+
+        @include respond(tab-port) {
+             
+            padding: 5rem 0;
+            
+        }
+        
 
         &-text {
 
@@ -270,7 +316,7 @@
             flex-basis: 50%;
             display: flex;
             align-items: flex-end;
-            justify-content: right;
+            justify-content: flex-end;
 
         }
     }
@@ -296,6 +342,18 @@
         width: 15rem;
         height: 15rem;
 
+        @include respond(tab-port) {
+             
+            top: .5rem;
+            left: auto;
+            transform: translate(0, 0);
+            right: 1.5rem;
+            background-size: 10.2rem 5.1rem;
+            width: 11rem;
+            height: 11rem;
+            
+        }
+
     }
 
     &_slide {
@@ -317,7 +375,13 @@
         &.blue1 {
 
             background-image: url(../img/blue1.png);
-            background-size: 32rem 20rem;
+            background-size: 30rem 18rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 24rem;
+                
+            }
 
         }
 
@@ -326,6 +390,12 @@
             background-image: url(../img/blue2.png);
             background-size: 30rem 20rem;
 
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 27rem;
+                
+            }
+
         }
 
         &.blue3 {
@@ -333,19 +403,234 @@
             background-image: url(../img/blue3.png);
             background-size: 30rem 30rem;
 
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 40rem;
+                
+            }
+
         }
 
         &.blue4 {
 
             background-image: url(../img/blue4.png);
-            background-size: 30rem 30rem;
+            background-size: 30rem 20rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 27rem;
+                
+            }
 
         }
 
         &.pink1 {
 
             background-image: url(../img/pink1.png);
+            background-size: 30rem 25rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 33rem;
+                
+            }
+
+        }
+
+        &.pink2 {
+
+            background-image: url(../img/pink2.png);
+            background-size: 30rem 23rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 31rem;
+                
+            }
+
+        }
+
+        &.pink3 {
+
+            background-image: url(../img/pink3.png);
+            background-size: 30rem 15rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 20rem;
+                
+            }
+
+        }
+
+        &.pink4 {
+
+            background-image: url(../img/pink4.png);
+            background-size: 30rem 20rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 27rem;
+                
+            }
+
+        }
+
+        &.magenta1 {
+
+            background-image: url(../img/magenta1.png);
+            background-size: 30rem 15rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 20rem;
+                
+            }
+
+        }
+
+        &.magenta2 {
+
+            background-image: url(../img/magenta2.png);
             background-size: 30rem 30rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 40rem;
+                
+            }
+
+        }
+
+        &.magenta3 {
+
+            background-image: url(../img/magenta3.png);
+            background-size: 30rem 30rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 40rem;
+                
+            }
+
+        }
+
+        &.magenta4 {
+
+            background-image: url(../img/magenta4.png);
+            background-size: 30rem 18rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 24rem;
+                
+            }
+
+        }
+
+        &.green1 {
+
+            background-image: url(../img/green1.png);
+            background-size: 30rem 19rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 26rem;
+                
+            }
+
+        }
+
+        &.green2 {
+
+            background-image: url(../img/green2.png);
+            background-size: 30rem 22rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 29rem;
+                
+            }
+
+        }
+
+        &.green3 {
+
+            background-image: url(../img/green3.png);
+            background-size: 30rem 30rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 40rem;
+                
+            }
+
+        }
+
+        &.green4 {
+
+            background-image: url(../img/green4.png);
+            background-size: 30rem 22rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 29rem;
+                
+            }
+
+        }
+
+        &.violet1 {
+
+            background-image: url(../img/violet1.png);
+            background-size: 30rem 20rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 27rem;
+                
+            }
+
+        }
+
+        &.violet2 {
+
+            background-image: url(../img/violet2.png);
+            background-size: 30rem 18rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 24rem;
+                
+            }
+
+        }
+
+        &.violet3 {
+
+            background-image: url(../img/violet3.png);
+            background-size: 30rem 21rem;
+
+            @include respond(spacebetween) {
+             
+                background-size: 40rem 28rem;
+                
+            }
+
+        }
+
+        &.violet4 {
+
+            background-image: url(../img/violet4.png);
+            background-size: 30rem 30rem;
+
+            @include respond(spacebetween){
+             
+                background-size: 40rem 40rem;
+                
+            }
+
+
 
         }
 
