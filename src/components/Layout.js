@@ -152,40 +152,36 @@ class Layout extends Component {
 
                 <div className="carousel_logo"></div>
 
-                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
-                                "1"+" "+`${this.state.active[0] ? "active" : ""}`}
+                <div className={`carousel_slide ${this.state.color[0]}1 ${this.state.active[0] ? "active" : ""}`}
                 >
                 </div>
-                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
-                                "2"+" "+`${this.state.active[1] ? "active" : ""}`}
+                <div className={`carousel_slide ${this.state.color[0]}2 ${this.state.active[1] ? "active" : ""}`}
                 >
                 </div>
-                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
-                                "3"+" "+`${this.state.active[2] ? "active" : ""}`}
+                <div className={`carousel_slide ${this.state.color[0]}3 ${this.state.active[2] ? "active" : ""}`}
                 >
                 </div>
-                <div className={"carousel_slide"+" "+`${this.state.color[0]}`+
-                                "4"+" "+`${this.state.active[3] ? "active" : ""}`}
+                <div className={`carousel_slide ${this.state.color[0]}4 ${this.state.active[3] ? "active" : ""}`}
                 >
                 </div>
 
                 <div className="carousel_controler">
-                    <div className={"carousel_controler-dot "+`${this.state.active[0] ? "active" : ""}`}
+                    <div className={`carousel_controler-dot ${this.state.active[0] ? "active" : ""}`}
                          style={{background:!this.state.active[0] ? `${this.state.color[1]}` : null}}
                          onClick={() => this.setState({active : [1,0,0,0]})}
                     >
                     </div>
-                    <div className={"carousel_controler-dot "+`${this.state.active[1] ? "active" : ""}`}
+                    <div className={`carousel_controler-dot ${this.state.active[1] ? "active" : ""}`}
                          style={{background:!this.state.active[1] ? `${this.state.color[1]}` : null}}
                          onClick={() => this.setState({active : [0,1,0,0]})}
                     >
                     </div>
-                    <div className={"carousel_controler-dot "+`${this.state.active[2] ? "active" : ""}`}
+                    <div className={`carousel_controler-dot ${this.state.active[2] ? "active" : ""}`}
                          style={{background:!this.state.active[2] ? `${this.state.color[1]}` : null}}
                          onClick={() => this.setState({active : [0,0,1,0]})}
                     >
                     </div>
-                    <div className={"carousel_controler-dot "+`${this.state.active[3] ? "active" : ""}`}
+                    <div className={`carousel_controler-dot ${this.state.active[3] ? "active" : ""}`}
                          style={{background:!this.state.active[3] ? `${this.state.color[1]}` : null}}
                          onClick={() => this.setState({active : [0,0,0,1]})}
                     >
