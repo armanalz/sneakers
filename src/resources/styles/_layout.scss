@@ -12,11 +12,6 @@
         
     }
 
-    // @include respond(phone) {
-             
-    //     height: 250vh;
-        
-    // }
 }
 
 .description {
@@ -66,6 +61,31 @@
             flex-basis: 15%;
             display: flex;
             justify-content: flex-end;
+
+            &.blue {
+
+                color: $color-blue;
+            }
+
+            &.pink {
+
+                color: $color-pink;
+            }
+
+            &.magenta {
+
+                color: $color-magenta;
+            }
+
+            &.green {
+
+                color: $color-green;
+            }
+
+            &.violet {
+
+                color: $color-violet;
+            }
 
             @include respond(phone) {
              
@@ -162,6 +182,7 @@
                             align-items: center;
                             margin: 0 .6rem 0 0 ;
                             cursor: pointer;
+                            z-index: 999;
 
                             &-blue {
 
@@ -170,7 +191,9 @@
 
                             &-pink {
 
-                                border: 1px solid $color-pink;
+                                border-color: $color-pink;
+                                border-style: solid;
+                                border-width: 1px;
                             }
 
                             &-magenta {
@@ -194,6 +217,7 @@
                             height: 1.4rem;
                             width: 1.4rem;
                             border-radius: 50%;
+                            z-index: -9;
 
                             &-blue {
 
@@ -356,6 +380,7 @@
         display: block;
         width: 15rem;
         height: 15rem;
+        z-index: 999;
 
         @include respond(tab-port) {
              
@@ -380,16 +405,15 @@
         top: 0;
         background-position: center center;
         background-repeat: no-repeat;
-        display: none;
+        z-index: 9;
 
-        &.active {
+        &.blue {
 
-            display: block;
+            background-color: $color-blue;
         }
 
         &.blue1 {
 
-            background-image: url(../img/blue1.png);
             background-size: 30rem 18rem;
 
             @include respond(spacebetween) {
@@ -402,7 +426,6 @@
 
         &.blue2 {
 
-            background-image: url(../img/blue2.png);
             background-size: 30rem 20rem;
 
             @include respond(spacebetween) {
@@ -415,7 +438,6 @@
 
         &.blue3 {
 
-            background-image: url(../img/blue3.png);
             background-size: 30rem 30rem;
 
             @include respond(spacebetween) {
@@ -428,7 +450,6 @@
 
         &.blue4 {
 
-            background-image: url(../img/blue4.png);
             background-size: 30rem 20rem;
 
             @include respond(spacebetween) {
@@ -439,9 +460,13 @@
 
         }
 
+        &.pink {
+
+            background-color: $color-pink;
+        }
+
         &.pink1 {
 
-            background-image: url(../img/pink1.png);
             background-size: 30rem 25rem;
 
             @include respond(spacebetween) {
@@ -454,7 +479,6 @@
 
         &.pink2 {
 
-            background-image: url(../img/pink2.png);
             background-size: 30rem 23rem;
 
             @include respond(spacebetween) {
@@ -467,7 +491,6 @@
 
         &.pink3 {
 
-            background-image: url(../img/pink3.png);
             background-size: 30rem 15rem;
 
             @include respond(spacebetween) {
@@ -480,7 +503,6 @@
 
         &.pink4 {
 
-            background-image: url(../img/pink4.png);
             background-size: 30rem 20rem;
 
             @include respond(spacebetween) {
@@ -491,9 +513,13 @@
 
         }
 
+        &.magenta {
+
+            background-color: $color-magenta;
+        }
+
         &.magenta1 {
 
-            background-image: url(../img/magenta1.png);
             background-size: 30rem 15rem;
 
             @include respond(spacebetween) {
@@ -506,7 +532,6 @@
 
         &.magenta2 {
 
-            background-image: url(../img/magenta2.png);
             background-size: 30rem 30rem;
 
             @include respond(spacebetween) {
@@ -519,7 +544,6 @@
 
         &.magenta3 {
 
-            background-image: url(../img/magenta3.png);
             background-size: 30rem 30rem;
 
             @include respond(spacebetween) {
@@ -532,7 +556,6 @@
 
         &.magenta4 {
 
-            background-image: url(../img/magenta4.png);
             background-size: 30rem 18rem;
 
             @include respond(spacebetween) {
@@ -543,9 +566,13 @@
 
         }
 
+        &.green {
+
+            background-color: $color-green;
+        }
+
         &.green1 {
 
-            background-image: url(../img/green1.png);
             background-size: 30rem 19rem;
 
             @include respond(spacebetween) {
@@ -558,7 +585,6 @@
 
         &.green2 {
 
-            background-image: url(../img/green2.png);
             background-size: 30rem 22rem;
 
             @include respond(spacebetween) {
@@ -571,7 +597,6 @@
 
         &.green3 {
 
-            background-image: url(../img/green3.png);
             background-size: 30rem 30rem;
 
             @include respond(spacebetween) {
@@ -584,7 +609,6 @@
 
         &.green4 {
 
-            background-image: url(../img/green4.png);
             background-size: 30rem 22rem;
 
             @include respond(spacebetween) {
@@ -595,9 +619,13 @@
 
         }
 
+        &.violet {
+
+            background-color: $color-violet;
+        }
+
         &.violet1 {
 
-            background-image: url(../img/violet1.png);
             background-size: 30rem 20rem;
 
             @include respond(spacebetween) {
@@ -610,7 +638,6 @@
 
         &.violet2 {
 
-            background-image: url(../img/violet2.png);
             background-size: 30rem 18rem;
 
             @include respond(spacebetween) {
@@ -623,7 +650,6 @@
 
         &.violet3 {
 
-            background-image: url(../img/violet3.png);
             background-size: 30rem 21rem;
 
             @include respond(spacebetween) {
@@ -636,7 +662,6 @@
 
         &.violet4 {
 
-            background-image: url(../img/violet4.png);
             background-size: 30rem 30rem;
 
             @include respond(spacebetween){
@@ -644,8 +669,6 @@
                 background-size: 40rem 40rem;
                 
             }
-
-
 
         }
 
@@ -658,16 +681,18 @@
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
+        z-index: 999;
         
 
         &-dot {
 
             width: 1.2rem;
             height: 1.2rem;
-            filter: brightness(70%);
+            filter: brightness(100%);
             border-radius: 100%;
             margin-right: 1rem;
             cursor: pointer;
+            background-color: rgba(255, 255, 255, .2);
 
             &.active {
 

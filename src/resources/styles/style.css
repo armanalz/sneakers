@@ -76,6 +76,16 @@ COLORS
       flex-basis: 15%;
       display: flex;
       justify-content: flex-end; }
+      .description_header-price.blue {
+        color: #4856db; }
+      .description_header-price.pink {
+        color: #f890a2; }
+      .description_header-price.magenta {
+        color: #c7029c; }
+      .description_header-price.green {
+        color: #2f9c2f; }
+      .description_header-price.violet {
+        color: #8a028a; }
       @media only screen and (max-width: 30em) {
         .description_header-price {
           flex-basis: 35%;
@@ -133,11 +143,14 @@ COLORS
           justify-content: center;
           align-items: center;
           margin: 0 0.6rem 0 0;
-          cursor: pointer; }
+          cursor: pointer;
+          z-index: 999; }
           .description_options-color-picker-item.border-blue {
             border: 1px solid #4856db; }
           .description_options-color-picker-item.border-pink {
-            border: 1px solid #f890a2; }
+            border-color: #f890a2;
+            border-style: solid;
+            border-width: 1px; }
           .description_options-color-picker-item.border-magenta {
             border: 1px solid #c7029c; }
           .description_options-color-picker-item.border-green {
@@ -147,7 +160,8 @@ COLORS
         .description_options-color-picker-item.circle {
           height: 1.4rem;
           width: 1.4rem;
-          border-radius: 50%; }
+          border-radius: 50%;
+          z-index: -9; }
           .description_options-color-picker-item.circle-blue {
             background: #4856db; }
           .description_options-color-picker-item.circle-pink {
@@ -241,7 +255,8 @@ COLORS
     background-size: 15rem 7.6rem;
     display: block;
     width: 15rem;
-    height: 15rem; }
+    height: 15rem;
+    z-index: 999; }
     @media only screen and (max-width: 56.25em) {
       .carousel_logo {
         top: .5rem;
@@ -259,125 +274,113 @@ COLORS
     top: 0;
     background-position: center center;
     background-repeat: no-repeat;
-    display: none; }
-    .carousel_slide.active {
-      display: block; }
+    z-index: 9; }
+    .carousel_slide.blue {
+      background-color: #4856db; }
     .carousel_slide.blue1 {
-      background-image: url(../img/blue1.png);
       background-size: 30rem 18rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.blue1 {
           background-size: 40rem 24rem; } }
     .carousel_slide.blue2 {
-      background-image: url(../img/blue2.png);
       background-size: 30rem 20rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.blue2 {
           background-size: 40rem 27rem; } }
     .carousel_slide.blue3 {
-      background-image: url(../img/blue3.png);
       background-size: 30rem 30rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.blue3 {
           background-size: 40rem 40rem; } }
     .carousel_slide.blue4 {
-      background-image: url(../img/blue4.png);
       background-size: 30rem 20rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.blue4 {
           background-size: 40rem 27rem; } }
+    .carousel_slide.pink {
+      background-color: #f890a2; }
     .carousel_slide.pink1 {
-      background-image: url(../img/pink1.png);
       background-size: 30rem 25rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.pink1 {
           background-size: 40rem 33rem; } }
     .carousel_slide.pink2 {
-      background-image: url(../img/pink2.png);
       background-size: 30rem 23rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.pink2 {
           background-size: 40rem 31rem; } }
     .carousel_slide.pink3 {
-      background-image: url(../img/pink3.png);
       background-size: 30rem 15rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.pink3 {
           background-size: 40rem 20rem; } }
     .carousel_slide.pink4 {
-      background-image: url(../img/pink4.png);
       background-size: 30rem 20rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.pink4 {
           background-size: 40rem 27rem; } }
+    .carousel_slide.magenta {
+      background-color: #c7029c; }
     .carousel_slide.magenta1 {
-      background-image: url(../img/magenta1.png);
       background-size: 30rem 15rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.magenta1 {
           background-size: 40rem 20rem; } }
     .carousel_slide.magenta2 {
-      background-image: url(../img/magenta2.png);
       background-size: 30rem 30rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.magenta2 {
           background-size: 40rem 40rem; } }
     .carousel_slide.magenta3 {
-      background-image: url(../img/magenta3.png);
       background-size: 30rem 30rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.magenta3 {
           background-size: 40rem 40rem; } }
     .carousel_slide.magenta4 {
-      background-image: url(../img/magenta4.png);
       background-size: 30rem 18rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.magenta4 {
           background-size: 40rem 24rem; } }
+    .carousel_slide.green {
+      background-color: #2f9c2f; }
     .carousel_slide.green1 {
-      background-image: url(../img/green1.png);
       background-size: 30rem 19rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.green1 {
           background-size: 40rem 26rem; } }
     .carousel_slide.green2 {
-      background-image: url(../img/green2.png);
       background-size: 30rem 22rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.green2 {
           background-size: 40rem 29rem; } }
     .carousel_slide.green3 {
-      background-image: url(../img/green3.png);
       background-size: 30rem 30rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.green3 {
           background-size: 40rem 40rem; } }
     .carousel_slide.green4 {
-      background-image: url(../img/green4.png);
       background-size: 30rem 22rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.green4 {
           background-size: 40rem 29rem; } }
+    .carousel_slide.violet {
+      background-color: #8a028a; }
     .carousel_slide.violet1 {
-      background-image: url(../img/violet1.png);
       background-size: 30rem 20rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.violet1 {
           background-size: 40rem 27rem; } }
     .carousel_slide.violet2 {
-      background-image: url(../img/violet2.png);
       background-size: 30rem 18rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.violet2 {
           background-size: 40rem 24rem; } }
     .carousel_slide.violet3 {
-      background-image: url(../img/violet3.png);
       background-size: 30rem 21rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.violet3 {
           background-size: 40rem 28rem; } }
     .carousel_slide.violet4 {
-      background-image: url(../img/violet4.png);
       background-size: 30rem 30rem; }
       @media only screen and (max-width: 56.25em) and (min-width: 30em) {
         .carousel_slide.violet4 {
@@ -387,14 +390,16 @@ COLORS
     bottom: 3rem;
     left: 50%;
     transform: translate(-50%, 0);
-    display: flex; }
+    display: flex;
+    z-index: 999; }
     .carousel_controler-dot {
       width: 1.2rem;
       height: 1.2rem;
-      filter: brightness(70%);
+      filter: brightness(100%);
       border-radius: 100%;
       margin-right: 1rem;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.2); }
       .carousel_controler-dot.active {
         background-color: #f6f2f2;
         filter: brightness(100%); }

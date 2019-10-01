@@ -6,11 +6,104 @@ class Layout extends Component {
     state = {
         
         selected:[1,0,0,0,0],
-        color:["blue","#4856db"],
-        active : [1,0,0,0]
+        color:"blue",
+        startX: null,
+        endX: null,
+        i: 1
+
+    }
+
+    selectorHandler = (e) => {
+
+        switch (e.target.id) {
+
+            case "blue":
+                this.setState({selected: [1,0,0,0,0],color: "blue"})
+              break;
+            case "magenta":
+                this.setState({selected: [0,0,1,0,0],color: "magenta"})
+              break;
+            case "pink":
+                this.setState({selected: [0,1,0,0,0],color: "pink"})
+              break;
+            case "green":
+                this.setState({selected: [0,0,0,1,0],color: "green"})
+              break;
+            case "violet":
+                this.setState({selected: [0,0,0,0,1],color: "violet"})
+              break;
+            default:
+                                   
+        }
+
+    }
+
+    carouselHandler = (e) => {
+
+        switch (e.target.id) {
+
+            case "1":
+                this.setState({i: 1})
+              break;
+            case "2":
+                    this.setState({i: 2})
+              break;
+            case "3":
+                    this.setState({i: 3})
+              break;
+            case "4":
+                    this.setState({i: 4})
+              break;
+            default:
+                
+        }
+
+    }
+
+    touchStartHandler = (e) => {
+
+        let touch = e.touches[0]
+        let clientStart = touch.clientX
+        this.setState({startX : clientStart })
+        
+    }
+
+    touchEndHandler = (e) => {
+
+        let changed = e.changedTouches[0];
+        let clientEnd = changed.clientX
+        let x1 = this.state.startX
+        let x2 = clientEnd
+       
+            if(x1-x2 > 100 && this.state.i < 4) {
+
+                this.setState({ i: this.state.i+1, endX: null, startX: null })
+    
+            }else if(x1-x2 > 100 && this.state.i >= 4) {
+    
+                this.setState({ i: 1, endX: null, startX: null })
+    
+            }else if(x1-x2 < -100 && this.state.i > 1) {
+    
+                this.setState({ i: this.state.i-1, endX: null, startX: null })
+    
+            }else if(x1-x2 < -100 && this.state.i <= 1) {
+    
+                this.setState({ i: 4, endX: null, startX: null })
+    
+            }else {
+    
+                this.setState({ endX: null, startX: null })
+
+            }
+        
     }
 
     render() { 
+
+        let bgIMG = require(`../resources/img/${this.state.color}${this.state.i}.png`)
+        let bgColor = this.state.color
+        
         return (
 
         <div className="layout_wrapper">
@@ -19,7 +112,7 @@ class Layout extends Component {
 
                 <div className="description_header">
                     <h1 className="description_header-title">nike odyssey react</h1>
-                    <h2 className="description_header-price" style={{color:this.state.color[1]}}>$55.56</h2>
+                    <h2 className={`description_header-price ${bgColor}`}>$55.56</h2>
                 </div>
 
                 <h4 className="description_collection">running collections</h4>
@@ -59,44 +152,48 @@ class Layout extends Component {
                         <div className="description_options-color-picker">
 
                             <div className={`description_options-color-picker-item border
-                                             ${this.state.selected[0] ? "border-blue" : null}`}
-                                 
-                                 onClick={() => this.setState({selected : [1,0,0,0,0],
-                                                               color:["blue","#4856db"]})}
+                                             ${this.state.selected[0] ? "border-blue" : null}`}           
                             >
-                               <div className="description_options-color-picker-item circle circle-blue"></div>
+                               <div className="description_options-color-picker-item circle circle-blue"
+                                    id="blue" onClick={(e) => this.selectorHandler(e)}
+                               >
+                               </div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
-                                             ${this.state.selected[1] ? "border-pink" : null}`}
-                                 onClick={() => this.setState({selected : [0,1,0,0,0],
-                                                               color:["pink","#f890a2"]})}
+                                             ${this.state.selected[1] ? "border-pink" : null}`}    
                             >
-                               <div className="description_options-color-picker-item circle circle-pink"></div>
+                               <div className="description_options-color-picker-item circle circle-pink"
+                                    id="pink" onClick={(e) => this.selectorHandler(e)}
+                               >
+                               </div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
-                                             ${this.state.selected[2] ? "border-magenta" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,1,0,0],
-                                                               color:["magenta","#ff00c8"]})}
+                                             ${this.state.selected[2] ? "border-magenta" : null}`}    
                             >
-                               <div className="description_options-color-picker-item circle circle-magenta"></div>
+                               <div className="description_options-color-picker-item circle circle-magenta"
+                                    id="magenta" onClick={(e) => this.selectorHandler(e)}
+                               >
+                               </div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
-                                             ${this.state.selected[3] ? "border-green" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,0,1,0],
-                                                               color:["green","#2f9c2f"]})}
+                                             ${this.state.selected[3] ? "border-green" : null}`}                                
                             >
-                               <div className="description_options-color-picker-item circle circle-green"></div>
+                               <div className="description_options-color-picker-item circle circle-green"
+                                    id="green" onClick={(e) => this.selectorHandler(e)}
+                               >     
+                               </div>
                             </div>
 
                             <div className={`description_options-color-picker-item border
-                                             ${this.state.selected[4] ? "border-violet" : null}`}
-                                 onClick={() => this.setState({selected : [0,0,0,0,1],
-                                                               color:["violet","#8a028a"]})}
+                                             ${this.state.selected[4] ? "border-violet" : null}`}                               
                             >
-                               <div className="description_options-color-picker-item circle circle-violet"></div>
+                               <div className="description_options-color-picker-item circle circle-violet"
+                                    id="violet" onClick={(e) => this.selectorHandler(e)}
+                               >
+                               </div>
                             </div>
 
                         </div> {/* description_options-color-picker */}
@@ -148,42 +245,39 @@ class Layout extends Component {
 
             </div>  {/* description */}
 
-            <div className="carousel" style={{background:`${this.state.color[1]}`}}> 
+            <div className="carousel"> 
 
-                <div className="carousel_logo"></div>
+               <div className="carousel_logo"></div>
 
-                <div className={`carousel_slide ${this.state.color[0]}1 ${this.state.active[0] ? "active" : ""}`}
-                >
-                </div>
-                <div className={`carousel_slide ${this.state.color[0]}2 ${this.state.active[1] ? "active" : ""}`}
-                >
-                </div>
-                <div className={`carousel_slide ${this.state.color[0]}3 ${this.state.active[2] ? "active" : ""}`}
-                >
-                </div>
-                <div className={`carousel_slide ${this.state.color[0]}4 ${this.state.active[3] ? "active" : ""}`}
-                >
-                </div>
+               <div className="carousel_slider"
+                    onTouchStart={(e) => this.touchStartHandler(e)}
+                    onTouchEnd={(e) => this.touchEndHandler(e)}
+               >
+                   <div className={`carousel_slide ${bgColor}${this.state.i} ${bgColor}`}
+                        style={{backgroundImage:`url(${bgIMG})`}}           
+                    >
+                    </div>
+               </div>
 
                 <div className="carousel_controler">
-                    <div className={`carousel_controler-dot ${this.state.active[0] ? "active" : ""}`}
-                         style={{background:!this.state.active[0] ? `${this.state.color[1]}` : null}}
-                         onClick={() => this.setState({active : [1,0,0,0]})}
+                    <div className={`carousel_controler-dot ${this.state.i === 1 ? "active" : ""}`}
+                         id="1"
+                         onClick={(e) => this.carouselHandler(e) } 
                     >
                     </div>
-                    <div className={`carousel_controler-dot ${this.state.active[1] ? "active" : ""}`}
-                         style={{background:!this.state.active[1] ? `${this.state.color[1]}` : null}}
-                         onClick={() => this.setState({active : [0,1,0,0]})}
+                    <div className={`carousel_controler-dot ${this.state.i === 2 ? "active" : ""}`}
+                         id="2"
+                         onClick={(e) => this.carouselHandler(e) } 
                     >
                     </div>
-                    <div className={`carousel_controler-dot ${this.state.active[2] ? "active" : ""}`}
-                         style={{background:!this.state.active[2] ? `${this.state.color[1]}` : null}}
-                         onClick={() => this.setState({active : [0,0,1,0]})}
+                    <div className={`carousel_controler-dot ${this.state.i === 3 ? "active" : ""}`}
+                         id="3"
+                         onClick={(e) => this.carouselHandler(e) } 
                     >
                     </div>
-                    <div className={`carousel_controler-dot ${this.state.active[3] ? "active" : ""}`}
-                         style={{background:!this.state.active[3] ? `${this.state.color[1]}` : null}}
-                         onClick={() => this.setState({active : [0,0,0,1]})}
+                    <div className={`carousel_controler-dot ${this.state.i === 4 ? "active" : ""}`}
+                         id="4"
+                         onClick={(e) => this.carouselHandler(e) } 
                     >
                     </div>
                 </div>
