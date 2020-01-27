@@ -9,7 +9,7 @@ class Layout extends Component {
         color:"blue",
         startX: null,
         endX: null,
-        i: 1
+        i: 1,
 
     }
 
@@ -70,10 +70,11 @@ class Layout extends Component {
 
     touchEndHandler = (e) => {
 
-        let changed = e.changedTouches[0];
+        let changed = e.changedTouches[0]
         let clientEnd = changed.clientX
         let x1 = this.state.startX
         let x2 = clientEnd
+                   
        
             if(x1-x2 > 100 && this.state.i < 4) {
 
@@ -253,8 +254,8 @@ class Layout extends Component {
                     onTouchStart={(e) => this.touchStartHandler(e)}
                     onTouchEnd={(e) => this.touchEndHandler(e)}
                >
-                   <div className={`carousel_slide ${bgColor}${this.state.i} ${bgColor}`}
-                        style={{backgroundImage:`url(${bgIMG})`}}           
+                   <div className={`carousel_slide mySlides ${bgColor}${this.state.i} ${bgColor}`}
+                        style={{ backgroundImage:`url(${bgIMG})`}}           
                     >
                     </div>
                </div>

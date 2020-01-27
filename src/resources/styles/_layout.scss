@@ -15,7 +15,9 @@
 }
 
 .description {
- 
+
+    display: flex;
+    flex-direction: column;
     flex-basis: 65%;
     padding: 4rem;
     background: $color-bg-left;
@@ -31,6 +33,13 @@
 
         display: flex;
         flex-direction: row;
+        order: 1;
+
+        @include respond(tab-port) {
+             
+            order: 2;
+            
+        }
 
         @include respond(phone) {
              
@@ -50,7 +59,7 @@
              
                 flex-basis: 65%;
                  
-             }
+            }
         }
 
         &-price {
@@ -92,7 +101,7 @@
                 flex-basis: 35%;
                 margin: 0 0 3rem 0;
                  
-             }
+            }
         }
     }
 
@@ -104,9 +113,24 @@
         font-size: 1.4rem;
         padding: 1rem 0;
         text-transform: capitalize;
+        order: 2;
+
+        @include respond(tab-port) {
+             
+            order: 3;
+            
+        }
     }
 
     &_icons {
+
+        order: 3;
+
+        @include respond(tab-port) {
+             
+            order: 4;
+            
+        }
         
     }
 
@@ -118,6 +142,13 @@
         font-size: 1.4rem;
         text-transform: uppercase;
         margin: 2.5rem 0 1.5rem 0;
+        order: 4;
+
+        @include respond(tab-port) {
+             
+            order: 5;
+            
+        }
     }
 
     &_text {
@@ -128,6 +159,13 @@
         line-height: 2.2rem;
         font-size: 1.2rem;
         padding: 0;
+        order: 5;
+
+        @include respond(tab-port) {
+             
+            order: 6;
+            
+        }
     }
 
     &_options {
@@ -135,6 +173,7 @@
         display: flex;
         flex-direction: row;
         padding: 5rem 0;
+        order: 6;
 
         @include respond(tab-land) {
              
@@ -145,6 +184,7 @@
         @include respond(tab-port) {
              
             padding: 5rem 0;
+            order: 1;
             
         }
         
@@ -256,6 +296,12 @@
             flex-direction: column;
             flex-basis: 25%;
 
+            @include respond(tab-port) {
+             
+                padding: 0 0 0 1.2rem;
+                
+            }
+
         }
 
         &-qty {
@@ -263,7 +309,12 @@
             display: flex;
             flex-direction: column;
             flex-basis: 25%;
-
+            
+            @include respond(tab-port) {
+             
+                padding: 0 0 0 1.2rem;
+                
+            }
         }
 
         &-select {
@@ -301,6 +352,13 @@
     &_button {
 
         display: flex;
+        order: 7;
+
+        @include respond(tab-port) {
+             
+            padding: 5rem 0;
+            
+        }
 
         &-wrapper {
 
