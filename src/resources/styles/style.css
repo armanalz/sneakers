@@ -384,189 +384,250 @@ COLORS
     height: 11rem;
   }
 }
-.carousel_slide {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 9;
+.carousel_slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.carousel_slide.blue {
+.carousel_slider.blue {
   background-color: #4856db;
 }
+.carousel_slider.pink {
+  background-color: #f890a2;
+}
+.carousel_slider.magenta {
+  background-color: #c7029c;
+}
+.carousel_slider.green {
+  background-color: #2f9c2f;
+}
+.carousel_slider.violet {
+  background-color: #8a028a;
+}
+.carousel_slide {
+  overflow: hidden;
+  z-index: 9;
+  background: transparent;
+  position: relative;
+}
+.carousel_slide-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+.carousel_slide-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .carousel_slide.blue1 {
-  background-size: 30rem 18rem;
+  width: 30rem;
+  height: 18rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.blue1 {
-    background-size: 40rem 24rem;
+    width: 40rem;
+    height: 24rem;
   }
 }
 .carousel_slide.blue2 {
-  background-size: 30rem 20rem;
+  width: 30rem;
+  height: 20rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.blue2 {
-    background-size: 40rem 27rem;
+    width: 40rem;
+    height: 27rem;
   }
 }
 .carousel_slide.blue3 {
-  background-size: 30rem 30rem;
+  width: 30rem;
+  height: 30rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.blue3 {
-    background-size: 40rem 40rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 .carousel_slide.blue4 {
-  background-size: 30rem 20rem;
+  width: 30rem;
+  height: 20rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.blue4 {
-    background-size: 40rem 27rem;
+    width: 40rem;
+    height: 27rem;
   }
 }
-.carousel_slide.pink {
-  background-color: #f890a2;
-}
 .carousel_slide.pink1 {
-  background-size: 30rem 25rem;
+  width: 30rem;
+  height: 25rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.pink1 {
-    background-size: 40rem 33rem;
+    width: 40rem;
+    height: 33rem;
   }
 }
 .carousel_slide.pink2 {
-  background-size: 30rem 23rem;
+  width: 30rem;
+  height: 23rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.pink2 {
-    background-size: 40rem 31rem;
+    width: 40rem;
+    height: 31rem;
   }
 }
 .carousel_slide.pink3 {
-  background-size: 30rem 15rem;
+  width: 30rem;
+  height: 15rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.pink3 {
-    background-size: 40rem 20rem;
+    width: 40rem;
+    height: 20rem;
   }
 }
 .carousel_slide.pink4 {
-  background-size: 30rem 20rem;
+  width: 30rem;
+  height: 20rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.pink4 {
-    background-size: 40rem 27rem;
+    width: 40rem;
+    height: 27rem;
   }
 }
-.carousel_slide.magenta {
-  background-color: #c7029c;
-}
 .carousel_slide.magenta1 {
-  background-size: 30rem 15rem;
+  width: 30rem;
+  height: 15rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.magenta1 {
-    background-size: 40rem 20rem;
+    width: 40rem;
+    height: 20rem;
   }
 }
 .carousel_slide.magenta2 {
-  background-size: 30rem 30rem;
+  width: 30rem;
+  height: 30rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.magenta2 {
-    background-size: 40rem 40rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 .carousel_slide.magenta3 {
-  background-size: 30rem 30rem;
+  width: 30rem;
+  height: 30rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.magenta3 {
-    background-size: 40rem 40rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 .carousel_slide.magenta4 {
-  background-size: 30rem 18rem;
+  width: 30rem;
+  height: 18rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.magenta4 {
-    background-size: 40rem 24rem;
+    width: 40rem;
+    height: 24rem;
   }
 }
-.carousel_slide.green {
-  background-color: #2f9c2f;
-}
 .carousel_slide.green1 {
-  background-size: 30rem 19rem;
+  width: 30rem;
+  height: 19rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.green1 {
-    background-size: 40rem 26rem;
+    width: 40rem;
+    height: 26rem;
   }
 }
 .carousel_slide.green2 {
-  background-size: 30rem 22rem;
+  width: 30rem;
+  height: 22rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.green2 {
-    background-size: 40rem 29rem;
+    width: 40rem;
+    height: 29rem;
   }
 }
 .carousel_slide.green3 {
-  background-size: 30rem 30rem;
+  width: 30rem;
+  height: 30rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.green3 {
-    background-size: 40rem 40rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 .carousel_slide.green4 {
-  background-size: 30rem 22rem;
+  width: 30rem;
+  height: 22rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.green4 {
-    background-size: 40rem 29rem;
+    width: 40rem;
+    height: 29rem;
   }
 }
-.carousel_slide.violet {
-  background-color: #8a028a;
-}
 .carousel_slide.violet1 {
-  background-size: 30rem 20rem;
+  width: 30rem;
+  height: 20rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.violet1 {
-    background-size: 40rem 27rem;
+    width: 40rem;
+    height: 27rem;
   }
 }
 .carousel_slide.violet2 {
-  background-size: 30rem 18rem;
+  width: 30rem;
+  height: 18rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.violet2 {
-    background-size: 40rem 24rem;
+    width: 40rem;
+    height: 24rem;
   }
 }
 .carousel_slide.violet3 {
-  background-size: 30rem 21rem;
+  width: 30rem;
+  height: 21rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.violet3 {
-    background-size: 40rem 28rem;
+    width: 40rem;
+    height: 28rem;
   }
 }
 .carousel_slide.violet4 {
-  background-size: 30rem 30rem;
+  width: 30rem;
+  height: 30rem;
 }
 @media only screen and (max-width: 56.25em) and (min-width: 30em) {
   .carousel_slide.violet4 {
-    background-size: 40rem 40rem;
+    width: 40rem;
+    height: 40rem;
   }
 }
 .carousel_controler {

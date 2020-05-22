@@ -454,68 +454,17 @@
 
     }
 
-    &_slide {
+    &_slider {
 
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background-position: center center;
-        background-repeat: no-repeat;
-        z-index: 9;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &.blue {
 
             background-color: $color-blue;
-        }
-
-        &.blue1 {
-
-            background-size: 30rem 18rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 24rem;
-                
-            }
-
-        }
-
-        &.blue2 {
-
-            background-size: 30rem 20rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 27rem;
-                
-            }
-
-        }
-
-        &.blue3 {
-
-            background-size: 30rem 30rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 40rem;
-                
-            }
-
-        }
-
-        &.blue4 {
-
-            background-size: 30rem 20rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 27rem;
-                
-            }
-
         }
 
         &.pink {
@@ -523,105 +472,9 @@
             background-color: $color-pink;
         }
 
-        &.pink1 {
-
-            background-size: 30rem 25rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 33rem;
-                
-            }
-
-        }
-
-        &.pink2 {
-
-            background-size: 30rem 23rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 31rem;
-                
-            }
-
-        }
-
-        &.pink3 {
-
-            background-size: 30rem 15rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 20rem;
-                
-            }
-
-        }
-
-        &.pink4 {
-
-            background-size: 30rem 20rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 27rem;
-                
-            }
-
-        }
-
         &.magenta {
 
             background-color: $color-magenta;
-        }
-
-        &.magenta1 {
-
-            background-size: 30rem 15rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 20rem;
-                
-            }
-
-        }
-
-        &.magenta2 {
-
-            background-size: 30rem 30rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 40rem;
-                
-            }
-
-        }
-
-        &.magenta3 {
-
-            background-size: 30rem 30rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 40rem;
-                
-            }
-
-        }
-
-        &.magenta4 {
-
-            background-size: 30rem 18rem;
-
-            @include respond(spacebetween) {
-             
-                background-size: 40rem 24rem;
-                
-            }
-
         }
 
         &.green {
@@ -629,13 +482,220 @@
             background-color: $color-green;
         }
 
-        &.green1 {
+        &.violet {
 
-            background-size: 30rem 19rem;
+            background-color: $color-violet;
+        }
+    }
+
+    &_slide {
+
+        overflow: hidden;
+        z-index: 9;
+        background: transparent;
+        position: relative;
+
+        &-img {
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        &-loader {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &.blue1 {
+
+            width: 30rem;
+            height: 18rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 26rem;
+                width: 40rem;
+                height: 24rem;
+                
+            }
+
+        }
+
+        &.blue2 {
+
+            width: 30rem;
+            height: 20rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 27rem;
+                
+            }
+
+        }
+
+        &.blue3 {
+
+            width: 30rem;
+            height: 30rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 40rem;
+                
+            }
+
+        }
+
+        &.blue4 {
+
+            width: 30rem;
+            height: 20rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 27rem;
+                
+            }
+
+        }
+
+        &.pink1 {
+
+            width: 30rem;
+            height: 25rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 33rem;
+                
+            }
+
+        }
+
+        &.pink2 {
+
+            width: 30rem;
+            height: 23rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 31rem;
+                
+            }
+
+        }
+
+        &.pink3 {
+
+            width: 30rem;
+            height: 15rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 20rem;
+                
+            }
+
+        }
+
+        &.pink4 {
+
+            width: 30rem;
+            height: 20rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 27rem;
+                
+            }
+
+        }
+
+        &.magenta1 {
+
+            width: 30rem;
+            height: 15rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 20rem;
+                
+            }
+
+        }
+
+        &.magenta2 {
+
+            width: 30rem;
+            height: 30rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 40rem;
+                
+            }
+
+        }
+
+        &.magenta3 {
+
+            width: 30rem;
+            height: 30rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 40rem;
+                
+            }
+
+        }
+
+        &.magenta4 {
+
+            width: 30rem;
+            height: 18rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 24rem;
+                
+            }
+
+        }
+
+        &.green1 {
+
+            width: 30rem;
+            height: 19rem;
+
+            @include respond(spacebetween) {
+             
+                width: 40rem;
+                height: 26rem;
                 
             }
 
@@ -643,11 +703,13 @@
 
         &.green2 {
 
-            background-size: 30rem 22rem;
+            width: 30rem;
+            height: 22rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 29rem;
+                width: 40rem;
+                height: 29rem;
                 
             }
 
@@ -655,11 +717,13 @@
 
         &.green3 {
 
-            background-size: 30rem 30rem;
+            width: 30rem;
+            height: 30rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 40rem;
+                width: 40rem;
+                height: 40rem;
                 
             }
 
@@ -667,28 +731,27 @@
 
         &.green4 {
 
-            background-size: 30rem 22rem;
+            width: 30rem;
+            height: 22rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 29rem;
+                width: 40rem;
+                height: 29rem;
                 
             }
 
         }
 
-        &.violet {
-
-            background-color: $color-violet;
-        }
-
         &.violet1 {
 
-            background-size: 30rem 20rem;
+            width: 30rem;
+            height: 20rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 27rem;
+                width: 40rem;
+                height: 27rem;
                 
             }
 
@@ -696,11 +759,13 @@
 
         &.violet2 {
 
-            background-size: 30rem 18rem;
+            width: 30rem;
+            height: 18rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 24rem;
+                width: 40rem;
+                height: 24rem;
                 
             }
 
@@ -708,11 +773,13 @@
 
         &.violet3 {
 
-            background-size: 30rem 21rem;
+            width: 30rem;
+            height: 21rem;
 
             @include respond(spacebetween) {
              
-                background-size: 40rem 28rem;
+                width: 40rem;
+                height: 28rem;
                 
             }
 
@@ -720,11 +787,13 @@
 
         &.violet4 {
 
-            background-size: 30rem 30rem;
+            width: 30rem;
+            height: 30rem;
 
             @include respond(spacebetween){
              
-                background-size: 40rem 40rem;
+                width: 40rem;
+                height: 40rem;
                 
             }
 

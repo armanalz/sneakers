@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CircleLoader from "react-spinners/CircleLoader";
 import Icon from './utilities/Icon';
 
 class Layout extends Component {
@@ -10,6 +11,14 @@ class Layout extends Component {
         startX: null,
         endX: null,
         i: 1,
+        loading: false
+
+    }
+
+
+    onImageLoading = () => {
+
+        this.setState({loading: true})
 
     }
 
@@ -18,19 +27,19 @@ class Layout extends Component {
         switch (e.target.id) {
 
             case "blue":
-                this.setState({selected: [1,0,0,0,0],color: "blue"})
+                this.setState({selected: [1,0,0,0,0],color: "blue", loading: false})
               break;
             case "magenta":
-                this.setState({selected: [0,0,1,0,0],color: "magenta"})
+                this.setState({selected: [0,0,1,0,0],color: "magenta", loading: false})
               break;
             case "pink":
-                this.setState({selected: [0,1,0,0,0],color: "pink"})
+                this.setState({selected: [0,1,0,0,0],color: "pink", loading: false})
               break;
             case "green":
-                this.setState({selected: [0,0,0,1,0],color: "green"})
+                this.setState({selected: [0,0,0,1,0],color: "green", loading: false})
               break;
             case "violet":
-                this.setState({selected: [0,0,0,0,1],color: "violet"})
+                this.setState({selected: [0,0,0,0,1],color: "violet", loading: false})
               break;
             default:
                                    
@@ -43,16 +52,16 @@ class Layout extends Component {
         switch (e.target.id) {
 
             case "1":
-                this.setState({i: 1})
+                this.setState({i: 1, loading: false})
               break;
             case "2":
-                    this.setState({i: 2})
+                    this.setState({i: 2, loading: false})
               break;
             case "3":
-                    this.setState({i: 3})
+                    this.setState({i: 3, loading: false})
               break;
             case "4":
-                    this.setState({i: 4})
+                    this.setState({i: 4, loading: false})
               break;
             default:
                 
@@ -78,19 +87,19 @@ class Layout extends Component {
        
             if(x1-x2 > 100 && this.state.i < 4) {
 
-                this.setState({ i: this.state.i+1, endX: null, startX: null })
+                this.setState({ i: this.state.i+1, endX: null, startX: null, loading: false })
     
             }else if(x1-x2 > 100 && this.state.i >= 4) {
     
-                this.setState({ i: 1, endX: null, startX: null })
+                this.setState({ i: 1, endX: null, startX: null , loading: false})
     
             }else if(x1-x2 < -100 && this.state.i > 1) {
     
-                this.setState({ i: this.state.i-1, endX: null, startX: null })
+                this.setState({ i: this.state.i-1, endX: null, startX: null, loading: false })
     
             }else if(x1-x2 < -100 && this.state.i <= 1) {
     
-                this.setState({ i: 4, endX: null, startX: null })
+                this.setState({ i: 4, endX: null, startX: null , loading: false})
     
             }else {
     
@@ -250,14 +259,21 @@ class Layout extends Component {
 
                <div className="carousel_logo"></div>
 
-               <div className="carousel_slider"
+               <div className={`carousel_slider ${bgColor}`}
                     onTouchStart={(e) => this.touchStartHandler(e)}
-                    onTouchEnd={(e) => this.touchEndHandler(e)}
+                    onTouchEnd={(e) => this.touchEndHandler(e)}                 
                >
-                   <div className={`carousel_slide mySlides ${bgColor}${this.state.i} ${bgColor}`}
-                        style={{ backgroundImage:`url(${bgIMG})`}}           
-                    >
-                    </div>
+                    
+                        <img className={`carousel_slide mySlides ${bgColor}${this.state.i}`}
+                             onLoad={() => this.onImageLoading()}                    
+                             src={bgIMG}  alt="sneaker"   style={{display:`${this.state.loading ? "block" : "none"}`}}      
+                        >
+                        </img>
+                        <div className="carousel_slide-loader"> 
+                           <CircleLoader size={70} color={"#EEE"} loading={!this.state.loading}/>
+                        </div>
+                           
+                           
                </div>
 
                 <div className="carousel_controler">
@@ -283,7 +299,7 @@ class Layout extends Component {
                     </div>
                 </div>
 
-            </div>
+            </div> {/* carousel */}
             
         </div> /* layout_wrapper */
 
